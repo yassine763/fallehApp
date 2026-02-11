@@ -119,10 +119,9 @@ const HomeScreen = ({ navigation }) => {
           >
             <View style={styles.headerContent}>
               <View style={styles.logoContainer}>
-                <Image
-                  source={require('../../assets/wheat-icon.png')}
-                  style={styles.logo}
-                />
+                <View style={styles.logoIconWrapper}>
+                  <MaterialCommunityIcons name="sprout" size={24} color="#FFF" />
+                </View>
                 <Text style={styles.appName}>Le Fellah Intelligent</Text>
               </View>
               <TouchableOpacity style={styles.notificationBtn}>
@@ -317,10 +316,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
   },
-  logo: {
+  logoIconWrapper: {
     width: 40,
     height: 40,
     marginRight: 10,
+    borderRadius: 20,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   appName: {
     fontSize: 20,
